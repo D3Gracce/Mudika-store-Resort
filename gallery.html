@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Luxury Haven | Our Story & Heritage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://your-hotel-photo.com/wide-luxury-shot.jpg') center/cover no-repeat;
+            height: 100vh;
+            min-height: 700px;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .room-card:hover .room-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .testimonial-card {
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #d4af37;
+            transition: width .3s;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .btn-gold {
+            background: linear-gradient(135deg, #d4af37 0%, #f0d27a 100%);
+        }
+        
+        .btn-gold:hover {
+            background: linear-gradient(135deg, #c19b2f 0%, #e6c66a 100%);
+        }
+    </style>
+</head>
+<body class="text-gray-800 overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 bg-white bg-opacity-90 backdrop-filter backdrop-blur-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="#" class="text-2xl font-bold logo text-gray-800">MUDIKA STORE RESORT</a>
+            </div>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="index.html" class="nav-link font-medium">Home</a>
+                <a href="rooms.html" class="nav-link font-medium">Rooms</a>
+                <a href="about_us.html" class="nav-link font-medium">About Us</a>
+                <a href="contact.html" class="nav-link font-medium">Contact Us</a>
+                <a href="gallery.html" class="nav-link font-medium">Gallery</a>
+                <a href="booking.html" class="px-6 py-2 rounded-full btn-gold text-white font-medium shadow-lg">Book Now</a>
+            </div>
+            <div class="md:hidden">
+                <button class="text-gray-800 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://your-hotel-photo.com/gallery-hero.jpg');">
+        <div class="flex items-center justify-center text-center text-white h-full">
+            <div class="container px-6 mx-auto">
+                <div class="max-w-4xl mx-auto">
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6 logo">Our Gallery</h1>
+                    <p class="text-xl md:text-2xl font-light mb-10">Experience Luxury Haven through our stunning visual collection</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Availability Search -->
+    <div class="container mx-auto px-6 -mt-12 relative z-10">
+        <div class="bg-white rounded-xl shadow-xl p-8">
+            <form class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div>
+                    <label class="block text-gray-700 mb-2">Check In</label>
+                    <input type="date" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-1 focus:ring-gold-500 focus:border-gold-500">
+                </div>
+                <div>
+                    <label class="block text-gray-700 mb-2">Check Out</label>
+                    <input type="date" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-1 focus:ring-gold-500 focus:border-gold-500">
+                </div>
+                <div>
+                    <label class="block text-gray-700 mb-2">Guests</label>
+                    <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-1 focus:ring-gold-500 focus:border-gold-500">
+                        <option>1 Guest</option>
+                        <option>2 Guests</option>
+                        <option>3 Guests</option>
+                        <option>4 Guests</option>
+                    </select>
+                </div>
+                <div class="flex items-end">
+                    <button type="submit" class="w-full px-6 py-3 rounded-lg btn-gold text-white font-medium">Check Availability</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Contact Form Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6 logo">Get In Touch</h2>
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-gray-700 mb-2">Full Name</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-1 focus:ring-gold-500 focus:border-gold-500">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Email Address</label>
+                            <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-1 focus:ring-gold-500 focus:border-gold-500">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-1 focus:ring-gold-500 focus:border-gold-500">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Subject</label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-1 focus:ring-gold-500 focus:border-gold-500">
+                                <option>General Inquiry</option>
+                                <option>Reservation Request</option>
+                                <option>Event Planning</option>
+                                <option>Feedback</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Message</label>
+                            <textarea rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-1 focus:ring-gold-500 focus:border-gold-500"></textarea>
+                        </div>
+                        <button type="submit" class="px-8 py-4 rounded-full btn-gold text-white font-medium text-lg shadow-lg hover:shadow-xl transition duration-300 w-full">Send Message</button>
+                    </form>
+                </div>
+                <div>
+                    <div class="bg-gray-50 p-8 rounded-xl h-full">
+                        <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-gold-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-gold-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Address</h4>
+                                    <p class="text-gray-600">123 Luxury Avenue<br>City Center, 10001</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-gold-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone-alt text-gold-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Phone</h4>
+                                    <p class="text-gray-600">+1 (555) 123-4567</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-gold-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-gold-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Email</h4>
+                                    <p class="text-gray-600">reservations@luxuryhaven.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-gold-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-clock text-gold-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Hours</h4>
+                                    <p class="text-gray-600">24/7 Concierge Service<br>Front Desk: 6:00 AM - 12:00 AM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <h4 class="font-bold mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-gray-600 hover:text-gold-600 text-xl"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="text-gray-600 hover:text-gold-600 text-xl"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="text-gray-600 hover:text-gold-600 text-xl"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="text-gray-600 hover:text-gold-600 text-xl"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 logo">Our Leadership</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Meet the passionate individuals who uphold our standards of excellence</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://your-hotel-photo.com/management/john-windsor.jpg" alt="John Windsor, Founder & Chairman" class="w-full h-80 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">John Windsor</h3>
+                        <p class="text-gold-600 mb-3">Founder & Chairman</p>
+                        <p class="text-gray-600 mb-4">"Luxury isn't about excess - it's about perfecting every detail to create meaningful experiences."</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://your-hotel-photo.com/management/sarah-chang.jpg" alt="Sarah Chang, General Manager" class="w-full h-80 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Sarah Chang</h3>
+                        <p class="text-gold-600 mb-3">General Manager</p>
+                        <p class="text-gray-600 mb-4">With 15 years in luxury hospitality, Sarah ensures every stay exceeds expectations.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://your-hotel-photo.com/management/michael-hernandez.jpg" alt="Michael Hernandez, Executive Chef" class="w-full h-80 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Michael Hernandez</h3>
+                        <p class="text-gold-600 mb-3">Executive Chef</p>
+                        <p class="text-gray-600 mb-4">Michelin-starred chef bringing innovative culinary experiences to our guests.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 logo">Rooms & Suites</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Each of our accommodations has been thoughtfully designed to provide the utmost in comfort and sophistication</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Room 1 -->
+                <div class="relative overflow-hidden rounded-xl group">
+                    <img src="https://your-hotel-photo.com/deluxe-room.jpg" alt="Deluxe King room featuring plush bedding, designer furniture and panoramic city views" class="w-full h-80 object-cover transition duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 left-0 p-6 text-white">
+                        <h3 class="text-2xl font-bold mb-1">Deluxe King</h3>
+                        <p class="mb-4">From $299/night</p>
+                        <a href="#" class="inline-block px-4 py-2 rounded-full bg-white bg-opacity-20 border border-white hover:bg-opacity-30 transition duration-300">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Room 2 -->
+                <div class="relative overflow-hidden rounded-xl group">
+                    <img src="https://your-hotel-photo.com/executive-suite.jpg" alt="Spacious executive suite with separate lounge area, king bed and marble-accented bathroom" class="w-full h-80 object-cover transition duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 left-0 p-6 text-white">
+                        <h3 class="text-2xl font-bold mb-1">Executive Suite</h3>
+                        <p class="mb-4">From $499/night</p>
+                        <a href="#" class="inline-block px-4 py-2 rounded-full bg-white bg-opacity-20 border border-white hover:bg-opacity-30 transition duration-300">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Room 3 -->
+                <div class="relative overflow-hidden rounded-xl group">
+                    <img src="https://your-hotel-photo.com/presidential-suite.jpg" alt="Luxury presidential suite featuring floor-to-ceiling windows, grand piano and designer furnishings" class="w-full h-80 object-cover transition duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 left-0 p-6 text-white">
+                        <h3 class="text-2xl font-bold mb-1">Presidential Suite</h3>
+                        <p class="mb-4">From $1,299/night</p>
+                        <a href="#" class="inline-block px-4 py-2 rounded-full bg-white bg-opacity-20 border border-white hover:bg-opacity-30 transition duration-300">View Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block px-8 py-3 rounded-full btn-gold text-white font-medium">View All Accommodations</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dining Section -->
+    <section class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 logo">Culinary Excellence</h2>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">Our award-winning restaurants offer exceptional dining experiences curated by world-renowned chefs</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Restaurant 1 -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden">
+                    <img src="https://your-hotel-photo.com/restaurant-aurum.jpg" alt="Elegant fine dining restaurant with designer lighting, luxurious table settings" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Aurum</h3>
+                        <p class="text-gold-400 mb-3">Michelin Star • Contemporary Cuisine</p>
+                        <p class="text-gray-300 mb-4">Experience innovative dishes crafted with seasonal ingredients from local producers.</p>
+                        <a href="#" class="inline-flex items-center text-gold-400">
+                            View Menu <i class="fas fa-chevron-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Restaurant 2 -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden">
+                    <img src="https://your-hotel-photo.com/horizon-lounge.jpg" alt="Stylish rooftop lounge with designer seating and panoramic sunset views" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Horizon Lounge</h3>
+                        <p class="text-gold-400 mb-3">Rooftop Bar • Craft Cocktails</p>
+                        <p class="text-gray-300 mb-4">Our mixologists create signature cocktails with premium spirits and rare ingredients.</p>
+                        <a href="#" class="inline-flex items-center text-gold-400">
+                            View Drinks <i class="fas fa-chevron-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Restaurant 3 -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden">
+                    <img src="https://your-hotel-photo.com/terrace-restaurant.jpg" alt="Sunlit restaurant terrace featuring gourmet breakfast buffet with ocean views" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">The Terrace</h3>
+                        <p class="text-gold-400 mb-3">All-Day Dining • International</p>
+                        <p class="text-gray-300 mb-4">Enjoy our famous breakfast buffet or indulge in afternoon tea with ocean views.</p>
+                        <a href="#" class="inline-flex items-center text-gold-400">
+                            View Hours <i class="fas fa-chevron-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 logo">Guest Experiences</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">What our valued guests say about their stay at Luxury Haven</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="text-gold-500 text-2xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"The attention to detail at Luxury Haven is unparalleled. From the moment we arrived, every need was anticipated. The spa treatments were transformative, and our suite had the most breathtaking views."</p>
+                    <div class="flex items-center">
+                        <img src="https://your-hotel-photo.com/testimonial-sarah.jpg" alt="Portrait of guest Sarah Johnson smiling" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold">Sarah Johnson</h4>
+                            <p class="text-gray-500">Toronto, Canada</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="text-gold-500 text-2xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"We celebrated our anniversary at Luxury Haven and it exceeded all expectations. The rooftop dinner was magical, and the staff went above and beyond to make our stay special. We'll definitely be back!"</p>
+                    <div class="flex items-center">
+                        <img src="https://your-hotel-photo.com/testimonial-chen.jpg" alt="Portrait of couple Michael and Emily Chen enjoying their stay" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold">Michael & Emily Chen</h4>
+                            <p class="text-gray-500">New York, USA</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="text-gold-500 text-2xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"As a business traveler, I appreciate efficiency with luxury. The executive floor at Luxury Haven provides both - impeccable service, state-of-the-art meeting rooms, and the most comfortable beds in the city."</p>
+                    <div class="flex items-center">
+                        <img src="https://your-hotel-photo.com/testimonial-muller.jpg" alt="Portrait of David Müller, satisfied business traveler" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold">David Müller</h4>
+                            <p class="text-gray-500">Berlin, Germany</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-6 logo">Ready for an Unforgettable Experience?</h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-10">Book your stay at Luxury Haven and discover why we're consistently ranked among the world's finest hotels.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#" class="px-8 py-4 rounded-full btn-gold text-white font-medium text-lg shadow-lg hover:shadow-xl transition duration-300">Book Direct & Save</a>
+                <a href="#" class="px-8 py-4 rounded-full bg-transparent border-2 border-gray-800 text-gray-800 font-medium text-lg hover:bg-gray-800 hover:text-white transition duration-300">Contact Concierge</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                <div>
+                    <h3 class="text-xl font-bold mb-6 logo">LUXURY HAVEN</h3>
+                    <p class="text-gray-400 mb-6">Where every detail matters and every moment is cherished.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Rooms & Suites</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Dining</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Spa & Wellness</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Gallery</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Contact Us</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-gold-500"></i>
+                            <span class="text-gray-400">123 Luxury Avenue<br>City Center, 10001</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3 text-gold-500"></i>
+                            <span class="text-gray-400">+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-gold-500"></i>
+                            <span class="text-gray-400">reservations@luxuryhaven.com</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe for exclusive offers and updates</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email address" class="px-4 py-3 w-full rounded-l-lg focus:outline-none text-gray-900">
+                        <button type="submit" class="bg-gold-500 px-4 py-3 rounded-r-lg text-white hover:bg-gold-600 transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">© 2023 Luxury Haven. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Mobile menu toggle would be implemented here
+        // This is just a placeholder for the actual implementation
+        const mobileMenuButton = document.querySelector('.md\\:hidden button');
+        mobileMenuButton.addEventListener('click', function() {
+            // Mobile menu toggle functionality
+            console.log('Mobile menu toggled');
+        });
+    </script>
+</body>
+</html>
